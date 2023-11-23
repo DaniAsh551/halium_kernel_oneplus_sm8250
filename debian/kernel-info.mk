@@ -49,7 +49,7 @@ KERNEL_IMAGE_WITH_DTB = 1
 # If you leave this undefined, an attempt to find it automatically
 # will be made.
 #KERNEL_IMAGE_DTB = arch/arm64/boot/dts/vendor/qcom/kona-v2-rumi.dtb arch/arm64/boot/dts/vendor/qcom/kona-xrfusion.dtb arch/arm64/boot/dts/vendor/qcom/kona-mtp-ws.dtb arch/arm64/boot/dts/vendor/qcom/kona-cdp-lcd.dtb arch/arm64/boot/dts/vendor/qcom/kona-mtp.dtb arch/arm64/boot/dts/vendor/qcom/kona-v2-mtp.dtb arch/arm64/boot/dts/vendor/qcom/kona-xr.dtb arch/arm64/boot/dts/vendor/qcom/kona-qrd.dtb arch/arm64/boot/dts/vendor/qcom/kona-rumi.dtb arch/arm64/boot/dts/vendor/qcom/kona-v2-cdp.dtb arch/arm64/boot/dts/vendor/qcom/kona-v2-mtp-ws.dtb arch/arm64/boot/dts/vendor/qcom/kona-cdp.dtb arch/arm64/boot/dts/vendor/qcom/kona-v2-qrd.dtb arch/arm64/boot/dts/vendor/qcom/kona-v2.1-cdp.dtb arch/arm64/boot/dts/vendor/qcom/kona-v2-xrfusion.dtb arch/arm64/boot/dts/vendor/qcom/kona-v2.1-qrd.dtb arch/arm64/boot/dts/vendor/qcom/kona-v2.1-mtp.dtb arch/arm64/boot/dts/vendor/qcom/kona-v2.1-mtp-ws.dtb arch/arm64/boot/dts/vendor/qcom/kona-hdk.dtb arch/arm64/boot/dts/vendor/qcom/kona-v2.1-iot-rb5.dtb arch/arm64/boot/dts/vendor/qcom/kona-v2.1-hdk.dtb arch/arm64/boot/dts/vendor/qcom/kona-v2.1-xrfusion.dtb
-KERNEL_IMAGE_DTB = arch/arm64/boot/dts/vendor/qcom/kona-mtp.dtb
+KERNEL_IMAGE_DTB = arch/arm64/boot/dts/vendor/qcom/kona.dtb
 
 # Whether to include a DTB Overlay. Use 0 (no) or 1.
 KERNEL_IMAGE_WITH_DTB_OVERLAY = 0
@@ -170,7 +170,7 @@ BUILD_PATH = /usr/lib/llvm-android-10.0-r370808/bin
 # Extra packages to add to the Build-Depends section. Mainline builds
 # can have this section empty, unless cross-building.
 # The default is enough to install the Android toolchain, including clang.
-DEB_TOOLCHAIN = linux-initramfs-halium-generic:arm64, binutils-aarch64-linux-gnu, clang-android-10.0-r370808, gcc-4.9-aarch64-linux-android, g++-4.9-aarch64-linux-android, libgcc-4.9-dev-aarch64-linux-android-cross
+DEB_TOOLCHAIN = linux-initramfs-halium-generic:arm64, binutils-aarch64-linux-gnu, clang-android-10.0-r370808, gcc-4.9-aarch64-linux-android, g++-4.9-aarch64-linux-android, libgcc-4.9-dev-aarch64-linux-android-cross, device-tree-compiler, python-is-python3
 
 # Where we're building on
 DEB_BUILD_ON = amd64
